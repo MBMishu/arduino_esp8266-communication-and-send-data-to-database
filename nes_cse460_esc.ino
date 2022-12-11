@@ -9,10 +9,10 @@
 WiFiClient wifiClient;
 
 
-#define HOST "cse360.bracu-duburi.com"
+#define HOST "website link"
 
-#define WIFI_SSID "PasaMota"
-#define WIFI_PASSWORD "123456789@"
+#define WIFI_SSID "wifi name"
+#define WIFI_PASSWORD "passwrod"
 
 float val1 = 28;
 float val2 = 80;
@@ -67,7 +67,7 @@ void loop() { // run over and over
       alt = String(val5);
 
       postData = "status_sound=" + status_sound + "&pressure=" + pressure +  "&dustDensity=" + dustDensity + "&temp=" + temp + "&alt=" + alt ;
-      http.begin(wifiClient, "http://cse360.bracu-duburi.com/write.php");
+      http.begin(wifiClient, "website link with http only");
       http.addHeader("Content-Type", "application/x-www-form-urlencoded");            //Specify content-type header
 
       int httpCode = http.POST(postData);
